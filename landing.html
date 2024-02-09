@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page Design</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="landing.css" type="text/css">
+</head>
+<body>
+    <div class="section">
+        <input type="checkbox" id="check">
+        <div class="navbar">
+            <div class="logo">
+                <h2>Code Craft</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">courses</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="">blog</a></li>
+                </ul>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </div>
+        <div class="content">
+            <div class="article">
+                <h1>Web Development <br> & Design</h1>
+                <h2>Hii</h2>
+                <p><b>I am <span>Rayadurgam Swetha</span></b></p>
+                <p><b>Contact Me for any <span>Queries</span></b></p>
+                <a href="" class="button">Join now</a>
+            </div>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=100089285049358"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/swetha0908"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/loves.to.smile.0908?igshid=NzZlODBkYWE4Ng=="><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+       
+    document.addEventListener('DOMContentLoaded', function () {
+        const checkbox = document.getElementById('check');
+        const menu = document.querySelector('.navbar .menu');
+        const joinButton = document.querySelector('.button');
+
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                menu.style.display = 'flex';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
+
+        joinButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default behavior of the anchor tag
+            // Add your logic for the "Join now" button here
+            alert('Thank You.. You have Succesfully Joined.!'); // Replace this with your actual logic
+        });
+    });
+
+
+   
+    </script>
+    
+</body>
+</html>
